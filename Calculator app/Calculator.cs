@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Calculator_app
 {
-    public partial class Form1 : Form
+    public partial class Calculator : Form
     {
-        public Form1()
+        public Calculator()
         {
             InitializeComponent();
         }
@@ -20,6 +20,31 @@ namespace Calculator_app
         private void OutputLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            OutputLabel.Text = "Output: " + Functions.add(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+        }
+
+        private void Num1textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OutputLabel.Text = "Output: " + Functions.sub(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+        }
+
+        private void multiplyButton_Click(object sender, EventArgs e)
+        {
+            OutputLabel.Text = "Output: " + Functions.multiply(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+        }
+
+        private void divideButton_Click(object sender, EventArgs e)
+        {
+            OutputLabel.Text = "Output: " + Functions.divide(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
         }
     }
 }

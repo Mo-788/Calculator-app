@@ -1,6 +1,6 @@
 ﻿namespace Calculator_app
 {
-    partial class Form1
+    partial class Calculator
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Num1textBox = new System.Windows.Forms.TextBox();
+            this.Num2textBox = new System.Windows.Forms.TextBox();
             this.OutputLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.subButton = new System.Windows.Forms.Button();
+            this.multiplyButton = new System.Windows.Forms.Button();
+            this.divideButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Num1textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 20);
-            this.textBox1.TabIndex = 0;
+            this.Num1textBox.Location = new System.Drawing.Point(123, 62);
+            this.Num1textBox.Name = "Num1textBox";
+            this.Num1textBox.Size = new System.Drawing.Size(279, 20);
+            this.Num1textBox.TabIndex = 0;
+            this.Num1textBox.TextChanged += new System.EventHandler(this.Num1textBox_TextChanged);
             // 
-            // textBox2
+            // Num2textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 20);
-            this.textBox2.TabIndex = 1;
+            this.Num2textBox.Location = new System.Drawing.Point(123, 175);
+            this.Num2textBox.Name = "Num2textBox";
+            this.Num2textBox.Size = new System.Drawing.Size(279, 20);
+            this.Num2textBox.TabIndex = 1;
             // 
             // OutputLabel
             // 
@@ -63,41 +65,45 @@
             this.OutputLabel.Text = "Output:";
             this.OutputLabel.Click += new System.EventHandler(this.OutputLabel_Click);
             // 
-            // button1
+            // addButton
             // 
-            this.button1.Location = new System.Drawing.Point(166, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 48);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addButton.Location = new System.Drawing.Point(166, 107);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(46, 48);
+            this.addButton.TabIndex = 3;
+            this.addButton.Text = "+";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // button2
+            // subButton
             // 
-            this.button2.Location = new System.Drawing.Point(218, 107);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 48);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "--";
-            this.button2.UseVisualStyleBackColor = true;
+            this.subButton.Location = new System.Drawing.Point(218, 107);
+            this.subButton.Name = "subButton";
+            this.subButton.Size = new System.Drawing.Size(46, 48);
+            this.subButton.TabIndex = 4;
+            this.subButton.Text = "--";
+            this.subButton.UseVisualStyleBackColor = true;
+            this.subButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // multiplyButton
             // 
-            this.button3.Location = new System.Drawing.Point(270, 107);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(46, 48);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = true;
+            this.multiplyButton.Location = new System.Drawing.Point(270, 107);
+            this.multiplyButton.Name = "multiplyButton";
+            this.multiplyButton.Size = new System.Drawing.Size(46, 48);
+            this.multiplyButton.TabIndex = 5;
+            this.multiplyButton.Text = "X";
+            this.multiplyButton.UseVisualStyleBackColor = true;
+            this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
             // 
-            // button4
+            // divideButton
             // 
-            this.button4.Location = new System.Drawing.Point(322, 107);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(46, 48);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "÷";
-            this.button4.UseVisualStyleBackColor = true;
+            this.divideButton.Location = new System.Drawing.Point(322, 107);
+            this.divideButton.Name = "divideButton";
+            this.divideButton.Size = new System.Drawing.Size(46, 48);
+            this.divideButton.TabIndex = 6;
+            this.divideButton.Text = "÷";
+            this.divideButton.UseVisualStyleBackColor = true;
+            this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
             // 
             // label1
             // 
@@ -117,21 +123,32 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Enter a number";
             // 
-            // Form1
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(443, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Instructions: Enter 2 numbers into the text boxes below then press one of thefunc" +
+    "tion buttons";
+            // 
+            // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 304);
+            this.ClientSize = new System.Drawing.Size(465, 306);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.divideButton);
+            this.Controls.Add(this.multiplyButton);
+            this.Controls.Add(this.subButton);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.OutputLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
+            this.Controls.Add(this.Num2textBox);
+            this.Controls.Add(this.Num1textBox);
+            this.Name = "Calculator";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,15 +157,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Num1textBox;
+        private System.Windows.Forms.TextBox Num2textBox;
         private System.Windows.Forms.Label OutputLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button subButton;
+        private System.Windows.Forms.Button multiplyButton;
+        private System.Windows.Forms.Button divideButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 
