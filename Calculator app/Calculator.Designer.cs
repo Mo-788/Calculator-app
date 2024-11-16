@@ -68,7 +68,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(166, 107);
+            this.addButton.Location = new System.Drawing.Point(201, 107);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(46, 48);
             this.addButton.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // subButton
             // 
-            this.subButton.Location = new System.Drawing.Point(218, 107);
+            this.subButton.Location = new System.Drawing.Point(253, 107);
             this.subButton.Name = "subButton";
             this.subButton.Size = new System.Drawing.Size(46, 48);
             this.subButton.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             // multiplyButton
             // 
-            this.multiplyButton.Location = new System.Drawing.Point(270, 107);
+            this.multiplyButton.Location = new System.Drawing.Point(305, 107);
             this.multiplyButton.Name = "multiplyButton";
             this.multiplyButton.Size = new System.Drawing.Size(46, 48);
             this.multiplyButton.TabIndex = 5;
@@ -98,7 +98,7 @@
             // 
             // divideButton
             // 
-            this.divideButton.Location = new System.Drawing.Point(322, 107);
+            this.divideButton.Location = new System.Drawing.Point(357, 107);
             this.divideButton.Name = "divideButton";
             this.divideButton.Size = new System.Drawing.Size(46, 48);
             this.divideButton.TabIndex = 6;
@@ -137,7 +137,7 @@
             // ECLabel
             // 
             this.ECLabel.AutoSize = true;
-            this.ECLabel.Location = new System.Drawing.Point(41, 123);
+            this.ECLabel.Location = new System.Drawing.Point(12, 125);
             this.ECLabel.Name = "ECLabel";
             this.ECLabel.Size = new System.Drawing.Size(0, 13);
             this.ECLabel.TabIndex = 11;
