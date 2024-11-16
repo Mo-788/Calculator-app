@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.ECLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Num1textBox
@@ -133,11 +134,20 @@
             this.label2.Text = "Instructions: Enter 2 numbers into the text boxes below then press one of thefunc" +
     "tion buttons";
             // 
+            // ECLabel
+            // 
+            this.ECLabel.AutoSize = true;
+            this.ECLabel.Location = new System.Drawing.Point(41, 123);
+            this.ECLabel.Name = "ECLabel";
+            this.ECLabel.Size = new System.Drawing.Size(0, 13);
+            this.ECLabel.TabIndex = 11;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 306);
+            this.Controls.Add(this.ECLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -167,6 +177,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label ECLabel;
     }
 }
 
