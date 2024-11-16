@@ -24,7 +24,10 @@ namespace Calculator_app
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            OutputLabel.Text = "Output: " + Functions.add(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+            if (Num1textBox.Text != "" & Num2textBox.Text != "")
+            {
+                OutputLabel.Text = "Output: " + Functions.add(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+            }
         }
 
         private void Num1textBox_TextChanged(object sender, EventArgs e)
@@ -34,17 +37,26 @@ namespace Calculator_app
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OutputLabel.Text = "Output: " + Functions.sub(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+            if (Num1textBox.Text != "" & Num2textBox.Text != "")
+            {
+                OutputLabel.Text = "Output: " + Functions.sub(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+            }
         }
 
         private void multiplyButton_Click(object sender, EventArgs e)
         {
-            OutputLabel.Text = "Output: " + Functions.multiply(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+            if (Num1textBox.Text != "" & Num2textBox.Text != "")
+            {
+                OutputLabel.Text = "Output: " + Functions.multiply(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+            }
         }
 
         private void divideButton_Click(object sender, EventArgs e)
         {
-            OutputLabel.Text = "Output: " + Functions.divide(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+            if (Num1textBox.Text != "" & Num2textBox.Text != "")
+            {
+                OutputLabel.Text = "Output: " + Functions.divide(double.Parse(Num1textBox.Text), double.Parse(Num1textBox.Text));
+            }
         }
     }
 }
